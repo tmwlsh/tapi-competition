@@ -1,0 +1,29 @@
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  &.small {
+    max-width: 840px;
+  }
+
+  &.medium {
+    max-width: 1100px;
+  }
+
+  &.large {
+    max-width: 1400px;
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}

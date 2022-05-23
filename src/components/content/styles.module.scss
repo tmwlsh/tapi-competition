@@ -1,0 +1,92 @@
+@import "../../sass/variables.scss";
+
+.content {
+  color: $white;
+  display: block;
+  padding: 30px 0;
+  background-color: $blue;
+
+  h1 {
+    margin: 15px 0;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 18px;
+
+    span {
+      display: block;
+
+      &:first-of-type {
+        margin: 0;
+        font-size: 100px;
+        font-weight: 400;
+        color: $lightGrey;
+        line-height: 100px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        -webkit-text-stroke: 4px $white;
+      }
+
+      &:last-of-type {
+        margin: 15px 0;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 34px;
+        letter-spacing: 0em;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38px;
+    margin: 70px 0 40px 0;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+  }
+
+  em {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 20px 0;
+  }
+
+  &.padd-none {
+    padding: 0;
+  }
+
+  &.padd-small {
+    padding: 30px 0;
+  }
+
+  &.padd-medium {
+    padding: 80px 0;
+  }
+
+  &.padd-large {
+    padding: 120px 0;
+  }
+
+  &.marginTop {
+    margin-top: 500px;
+  }
+}

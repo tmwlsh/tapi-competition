@@ -1,0 +1,11 @@
+@import "../../sass/variables.scss";
+
+.background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-size: cover;
+  background-image: url('/background.jpg');
+}

@@ -1,0 +1,40 @@
+@import "./variables.scss";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: $medium;
+  background-color: $blue;
+}
+
+body main {
+  padding-top: 300px;
+
+  &:before {
+    left: 0;
+    top: 200px;
+    content: '';
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    transform: skewY(7deg);
+    background-color: $blue;
+
+    @media all and (min-width: 1920px) {
+      transform: skewY(3deg);
+    }
+
+    @media all and (min-width: 3600px) {
+      transform: skewY(2deg);
+    }
+  }
+
+  & > div {
+    z-index: 100;
+    position: relative;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
