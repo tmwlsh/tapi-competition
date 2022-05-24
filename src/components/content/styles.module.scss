@@ -50,10 +50,10 @@
   }
 
   h3 {
+    margin: 0;
     font-size: 32px;
     font-weight: 400;
     line-height: 38px;
-    margin: 70px 0 40px 0;
   }
 
   p {
@@ -64,29 +64,89 @@
   }
 
   em {
+    display: block;
+    text-align: right;
+    width: 100%;
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
     margin: 0 0 20px 0;
   }
 
-  &.padd-none {
-    padding: 0;
+  &.none {
+    padding: 5px 0;
   }
 
-  &.padd-small {
+  &.small {
     padding: 30px 0;
   }
 
-  &.padd-medium {
+  &.medium {
     padding: 80px 0;
   }
 
-  &.padd-large {
+  &.large {
     padding: 120px 0;
+  }
+
+  &.footer {
+    padding: 0 0 120px 0;
   }
 
   &.marginTop {
     margin-top: 500px;
+  }
+
+  svg {
+    margin: 0 auto;
+    max-width: 150px;
+  }
+
+  &.slashtop {
+    position: relative;
+
+    &:before {
+      left: 0;
+      top: -130px;
+      z-index: 10;
+      content: '';
+      width: 100%;
+      height: 250px;
+      position: absolute;
+      transform: skewY(7deg);
+      background-color: $blue;
+
+      @media all and (min-width: 1920px) {
+        transform: skewY(3deg);
+      }
+
+      @media all and (min-width: 3600px) {
+        transform: skewY(2deg);
+      }
+    }
+  }
+
+  &.slashbottom {
+    position: relative;
+
+    &:before {
+      left: 0;
+      z-index: 10;
+      content: '';
+      width: 100%;
+      bottom: -130px;
+      height: 250px;
+      position: absolute;
+      transform: skewY(7deg);
+      background-color: $blue;
+
+      @media all and (min-width: 1920px) {
+        transform: skewY(3deg);
+      }
+
+      @media all and (min-width: 3600px) {
+        transform: skewY(2deg);
+      }
+    }
   }
 }

@@ -2,9 +2,11 @@ import * as React from "react";
 
 import * as styles from "./styles.module.scss";
 
-const Background = () => {
+const Background = ({children}) => {
   return (
-    <div className={styles.background} />
+    <div className={styles.background}>
+      {children}
+    </div>
   )
 }
 

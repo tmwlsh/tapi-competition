@@ -4,7 +4,7 @@ import * as styles from "./styles.module.scss";
 
 const Form = () => {
   return (
-    <>
+    <div className={styles.formContainer}>
       <h4>Your Details</h4>
       <form className={`${styles.form}`}>
         <input type="text" placeholder="Name" />
@@ -22,7 +22,7 @@ const Form = () => {
           <input type="submit" value="Submit" />
         </div>
       </form>
-    </>
+    </div>
   )
 }
 
