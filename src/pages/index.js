@@ -22,7 +22,10 @@ const IndexPage = () => {
     setTermsHidden(!termsHidden);
   }
 
-  const { width, height } = useWindowSize()
+  const { width, height } = useWindowSize();
+
+  console.log('width', width);
+
   return (
     <>
       <Helmet>
