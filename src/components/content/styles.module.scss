@@ -8,11 +8,16 @@
 
   h1 {
     margin: 15px 0;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 32px;
     letter-spacing: 0.36em;
     text-transform: uppercase;
+
+    @media all and (min-width: $tablet) {
+      font-size: 30px;
+      line-height: 48px;
+    }
   }
 
   h2 {
@@ -23,30 +28,38 @@
 
       &:first-of-type {
         margin: 0;
-        font-size: 100px;
         font-weight: 400;
-        color: $lightGrey;
-        line-height: 100px;
+        color: transparent;
+        font-size: 50px;
+        line-height: 50px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         -webkit-text-stroke: 4px $white;
+
+        @media all and (min-width: $mobile) {
+          font-size: 75px;
+          line-height: 75px;
+        }
+
+        @media all and (min-width: $tablet) {
+          font-size: 100px;
+          line-height: 100px;
+        }
       }
 
       &:last-of-type {
         margin: 15px 0;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 400;
-        line-height: 34px;
+        line-height: 24px;
         letter-spacing: 0em;
+
+        @media all and (min-width: $tablet) {
+          font-size: 22px;
+          line-height: 34px;
+        }
       }
     }
-  }
-
-  img {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    max-width: 640px;
   }
 
   h3 {
@@ -78,11 +91,19 @@
   }
 
   &.small {
-    padding: 30px 0;
+    padding: 15px 0;
+
+    @media all and (min-width: $tablet) {
+      padding: 80px 0;
+    }
   }
 
   &.medium {
-    padding: 80px 0;
+    padding: 40px 0;
+
+    @media all and (min-width: $tablet) {
+      padding: 80px 0;
+    }
   }
 
   &.large {
@@ -113,10 +134,10 @@
       width: 100%;
       height: 250px;
       position: absolute;
-      transform: skewY(7deg);
+      transform: skewY(10deg);
       background-color: $blue;
 
-      @media all and (min-width: 1920px) {
+      @media all and (min-width: 1350px) {
         transform: skewY(3deg);
       }
 
@@ -137,10 +158,10 @@
       bottom: -130px;
       height: 250px;
       position: absolute;
-      transform: skewY(7deg);
+      transform: skewY(10deg);
       background-color: $blue;
 
-      @media all and (min-width: 1920px) {
+      @media all and (min-width: 1350px) {
         transform: skewY(3deg);
       }
 

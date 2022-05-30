@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+.star-row {
+  width: 100%;
+  display: flex;
+  margin: 40px 0 50px 0;
+  justify-content: space-between;
+
+  img {
+    width: 20px;
+    height: auto;
+  }
+
+  @media all and (min-width: $tablet) {
+    img {
+      width: 30px;
+    }
+  }
+}

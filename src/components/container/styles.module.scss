@@ -1,3 +1,5 @@
+@import "../../sass/variables.scss";
+
 .container {
   display: block;
   margin: 0 auto;
@@ -5,8 +7,23 @@
   position: relative;
   z-index: 100;
 
+  & > img {
+    display: block;
+    max-width: 640px;
+    width: 100% !important;
+    margin: -45vw auto 0 auto;
+
+    @media all and (min-width: $mobile) {
+      margin: -270px auto 0 auto;
+    }
+
+    @media all and (min-width: $tablet) {
+      margin: -320px auto 0 auto;
+    }
+  }
+
   &.small {
-    max-width: 840px;
+    max-width: 940px;
   }
 
   &.medium {

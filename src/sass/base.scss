@@ -17,10 +17,10 @@ body main {
     width: 100%;
     height: 300px;
     position: absolute;
-    transform: skewY(7deg);
+    transform: skewY(10deg);
     background-color: $blue;
 
-    @media all and (min-width: 1920px) {
+    @media all and (min-width: 1350px) {
       transform: skewY(3deg);
     }
 

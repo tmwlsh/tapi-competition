@@ -8,7 +8,8 @@
   input[type="text"],
   input[type="email"],
   input[type="tel"],
-  input[type="number"] {
+  input[type="number"],
+  select {
     border: 0;
     width: 100%;
     outline: none;
@@ -21,13 +22,10 @@
     line-height: 29px;
     transition: .25s $transition;
     background-color: transparent;
+    border-bottom: 1px solid rgba($white, 0.7);
 
     &::placeholder {
       color: rgba($white, 0.4);
-    }
-
-    &:not(:last-of-type) {
-      border-bottom: 1px solid rgba($white, 0.7);
     }
 
     &:focus {
@@ -64,6 +62,39 @@
       &:hover {
         background-color: $yellow;
       }
+    }
+  }
+
+  .submit-btn {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media all and (min-width: $tablet) {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+
+  .select-outer {
+    display: block;
+    position: relative;
+
+    select {
+      cursor: pointer;
+    }
+
+    &:after {
+      top: 39%;
+      width: 15px;
+      content: '';
+      right: 20px;
+      height: 15px;
+      position: absolute;
+      pointer-events: none;
+      border-right: 3px solid $white;
+      border-bottom: 3px solid $white;
+      transform: translateY(-50%) rotate(45deg);
     }
   }
 

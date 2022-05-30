@@ -10,6 +10,8 @@ import Background from "../components/background";
 
 import TapiLogo from "../svgs/tapi-logo.svg";
 
+import * as styles from "../sass/home.module.scss";
+
 const IndexPage = () => {
   const { width, height } = useWindowSize()
   return (
@@ -32,20 +34,29 @@ const IndexPage = () => {
           <Content>
             <Container size="small" alignment="center">
               <h2>
-                <span>Win £2,500</span>
-                <span>towards Tapi flooring or gift vouchers to spend in-store</span>
+                <span>Win £2,500 *</span>
+                <span>or £500 towards Tapi flooring - plus many mystery vouchers to be won!</span>
               </h2>
+              <div className={styles.starRow}>
+                <img src="/star.png" alt="Gold Star Icon" />
+                <img src="/star.png" alt="Gold Star Icon" />
+                <img src="/star.png" alt="Gold Star Icon" />
+                <img src="/star.png" alt="Gold Star Icon" />
+                <img src="/star.png" alt="Gold Star Icon" />
+                <img src="/star.png" alt="Gold Star Icon" />
+                <img src="/star.png" alt="Gold Star Icon" />
+              </div>
               <h3>Congratulations!</h3>
             </Container>
           </Content>
           <Content padding="medium" slash="slashbottom">
             <Container size="medium" alignment="left">
               <p>You are the lucky finder of one of our special golden tickets.</p>
-              <p>One lucky golden ticket finder will win an interior design consultation with [insert interior designer] plus £2,500 worth of new flooring towards your home. The other three recipients will win monetary vouchers for [£X] to use in store or online.</p>
-              <p>The first person to enter their details will win the grand prize, and the three runners-up will win the vouchers towards renovating your home.</p>
-              <p>Just enter your details below and we’ll get in touch to organize your prize.</p>
-              <p>Good Luck!</p>
-              <em>*T’s & C’s Apply</em>
+              <p>One lucky golden ticket finder will win an interior design consultation with Banjo Beale, plus up to the value of £2,500 worth of Tapi flooring towards their home. Two lucky winners will win up to the value of £500 worth of Tapi flooring and there's plenty of mystery prizes up for grabs too!</p>
+              <p>Just enter your details below (remember to tick which store you found the ticket in) and we'll be in touch to let you know if you've won. </p>
+              <p>All winners will be generated at random.</p>
+              <p>Good luck!</p>
+              <em>*T's & C's Apply</em>
             </Container>
           </Content>
           <Content marginTop={true} padding="small" slash="slashtop">
