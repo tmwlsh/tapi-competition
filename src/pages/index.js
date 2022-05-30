@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import useWindowSize from 'react-use/lib/useWindowSize'
+// import useWindowSize from 'react-use/lib/useWindowSize'
+import {
+  useWindowSize,
+  useWindowWidth,
+  useWindowHeight,
+} from '@react-hook/window-size'
 import Confetti from 'react-confetti'
 
 import Layout from "../components/layout";
@@ -22,9 +27,9 @@ const IndexPage = () => {
     setTermsHidden(!termsHidden);
   }
 
-  const { width, height } = useWindowSize();
-
-  console.log('width', width);
+  const [width, height] = useWindowSize()
+  const onlyWidth = useWindowWidth()
+  const onlyHeight = useWindowHeight()
 
   return (
     <>
