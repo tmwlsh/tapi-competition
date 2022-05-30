@@ -2,7 +2,7 @@ import * as React from "react";
 
 import * as styles from "./styles.module.scss";
 
-const Form = () => {
+const Form = ({toggle}) => {
   return (
     <div className={styles.formContainer}>
       <h4>Your Details</h4>
@@ -16,7 +16,7 @@ const Form = () => {
         <input type="text" placeholder="Postcode" />
         <div className={styles.selectOuter}>
           <select>
-            <option defaultValue disabled>Where did you find your ticket?</option>
+            <option selected disabled>Where did you find your ticket?</option>
             <option>Tapi Abbotsinch</option>
             <option>Tapi Aberdeen</option>
             <option>Tapi Abingdon</option>
@@ -210,7 +210,7 @@ const Form = () => {
         </div>
         <div className={styles.formCheck}>
           <input type="checkbox" id="terms" name="terms"/>
-          <label htmlFor="terms">I agree with our <a href="/">Terms and Conditions</a></label>
+          <label htmlFor="terms">I agree with our <button onClick={toggle}>Terms and Conditions</button></label>
         </div>
         <div className={styles.submitBtn}>
           <input type="submit" value="Submit" />

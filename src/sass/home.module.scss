@@ -17,3 +17,66 @@
     }
   }
 }
+
+.terms {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100vh;
+  position: fixed;
+  background-color: $blue;
+}
+
+.terms-header {
+  display: flex;
+  color: $white;
+  align-items: center;
+  padding: 50px 0 50px 0;
+  justify-content: space-between;
+
+  button {
+    outline: none;
+    border: none;
+    appearance: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: $white;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+
+    &:after {
+      left: 10px;
+      content: '';
+      height: 2px;
+      bottom: 5px;
+      position: absolute;
+      pointer-events: none;
+      width: calc(100% - 20px);
+      background-color: $white;
+    }
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.terms-body {
+  color: $white;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  overflow: scroll;
+  height: 75vh;
+
+  p {
+    margin: 0 0 5px 0;
+  }
+}
