@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 
 import Layout from "../components/layout";
@@ -22,7 +21,46 @@ const IndexPage = () => {
     setTermsHidden(!termsHidden);
   }
 
-  const { width, height } = useWindowSize();
+  function useWindowSize(handleResize) {
+    // Initialize state with undefined width/height so server and client renders match
+    const [windowSize, setWindowSize] = useState({
+        width: undefined,
+        height: undefined,
+    });
+
+    useEffect(() => {
+        // Handler to call on window resize
+        function handleWindowResize() {
+            // Set window width/height to state
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+
+            if (typeof handleResize === 'function') {
+                handleResize();
+            }
+        }
+
+        // Add event listener
+        window.addEventListener('resize', handleWindowResize);
+
+        // Call handler right away so state gets updated with initial window size
+        handleWindowResize();
+
+        // Remove event listener on cleanup
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, [handleResize]);
+
+    return windowSize;
+  }
+
+  const windowSize = useWindowSize();
+
+  if (!windowSize.width || !windowSize.height) {
+    return null;
+  }
+
 
   return (
     <>
@@ -31,8 +69,8 @@ const IndexPage = () => {
       </Helmet>
       <Background>
         <Confetti
-          width={width}
-          height={height}
+          width={windowSize.width}
+          height={windowSize.height}
           colors={[`#F9ECA2`, `#FFFFFF`, `#A39861`, `#797344`]}
         />
       </Background>
