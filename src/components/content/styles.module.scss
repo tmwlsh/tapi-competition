@@ -28,13 +28,13 @@
 
       &:first-of-type {
         margin: 0;
-        font-weight: 400;
+        font-weight: 900;
         color: transparent;
         font-size: 50px;
         line-height: 50px;
-        letter-spacing: 0.05em;
+        letter-spacing: 4px;
         text-transform: uppercase;
-        -webkit-text-stroke: 4px $white;
+        color: $white;
 
         @media all and (min-width: $mobile) {
           font-size: 75px;
