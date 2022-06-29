@@ -4,9 +4,15 @@ import * as styles from "./styles.module.scss";
 
 const Form = ({toggle}) => {
   return (
-    <div className={styles.formContainer}>
+    <div className={styles.formContainer} id="contact">
       <h4>Your Details</h4>
-      <form netlify-honeypot="bot-field" data-netlify="true" name="contact" netlify className={`${styles.form}`}>
+      <form
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        name="contact"
+        netlify
+        className={`${styles.form}`}
+      >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" placeholder="Name" />
