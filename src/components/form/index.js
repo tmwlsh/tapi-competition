@@ -6,7 +6,7 @@ const Form = ({toggle}) => {
   return (
     <div className={styles.formContainer}>
       <h4>Your Details</h4>
-      <form netlify netlify-honeypot="bot-field" data-netlify="true" name="contact" className={`${styles.form}`}>
+      <form netlify-honeypot="bot-field" data-netlify="true" name="contact" netlify className={`${styles.form}`}>
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <input type="text" placeholder="Name" />
