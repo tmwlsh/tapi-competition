@@ -15,15 +15,15 @@ const Form = ({toggle}) => {
       >
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="email" placeholder="Confirm Email" />
-        <input type="tel" placeholder="Phone" />
-        <input type="tel" placeholder="Confirm Phone Number" />
-        <input type="number" placeholder="House Number" />
-        <input type="text" placeholder="Postcode" />
+        <input name="Name" type="text" placeholder="Name" />
+        <input name="Email" type="email" placeholder="Email" />
+        <input name="Confirm Email" type="email" placeholder="Confirm Email" />
+        <input name="Phone" type="tel" placeholder="Phone" />
+        <input name="Confirm Phone Number" type="tel" placeholder="Confirm Phone Number" />
+        <input name="House Number" type="number" placeholder="House Number" />
+        <input name="Postcode" type="text" placeholder="Postcode" />
         <div className={styles.selectOuter}>
-          <select>
+          <select name="">
             <option selected disabled>Where did you find your ticket?</option>
             <option>Tapi Abbotsinch</option>
             <option>Tapi Aberdeen</option>
@@ -217,7 +217,7 @@ const Form = ({toggle}) => {
           </select>
         </div>
         <div className={styles.formCheck}>
-          <input type="checkbox" id="terms" name="terms"/>
+          <input type="checkbox" id="terms" name="Terms"/>
           <label htmlFor="terms">I agree with our <button onClick={toggle}>Terms and Conditions</button></label>
         </div>
         <div className={styles.submitBtn}>
