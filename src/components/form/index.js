@@ -7,10 +7,10 @@ const Form = ({toggle}) => {
     <div className={styles.formContainer} id="contact">
       <h4>Your Details</h4>
       <form
-        netlify-honeypot="bot-field"
-        data-netlify="true"
         name="contact"
         netlify
+        data-netlify="true"
+        netlify-honeypot="bot-field"
         className={`${styles.form}`}
       >
         <input type="hidden" name="bot-field" />
