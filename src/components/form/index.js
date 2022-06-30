@@ -9,18 +9,19 @@ const Form = ({toggle}) => {
       <form
         name="contact"
         method="POST"
+        netlify
         data-netlify="true"
-        action="/thank-you"
+        netlify-honeypot="bot-field"
         className={`${styles.form}`}
       >
         <input type="hidden" name="bot-field" />
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="contact" value="contact" />
         <input name="Name" type="text" placeholder="Name" />
         <input name="Email" type="email" placeholder="Email" />
         <input name="Confirm Email" type="email" placeholder="Confirm Email" />
         <input name="Phone" type="tel" placeholder="Phone" />
         <input name="Confirm Phone Number" type="tel" placeholder="Confirm Phone Number" />
-        <input name="House Number" type="text" placeholder="House Number" />
+        <input name="House Number" type="number" placeholder="House Number" />
         <input name="Postcode" type="text" placeholder="Postcode" />
         <div className={styles.selectOuter}>
           <select name="">
