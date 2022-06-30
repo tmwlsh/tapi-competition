@@ -8,9 +8,9 @@ const Form = ({toggle}) => {
       <h4>Your Details</h4>
       <form
         name="contact"
-        // method="POST"
-        netlify
-        // netlify-honeypot="bot-field"
+        method="POST"
+        data-netlify="true"
+        action="/thank-you"
         className={`${styles.form}`}
       >
         <input type="hidden" name="bot-field" />
