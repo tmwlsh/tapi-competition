@@ -8,6 +8,7 @@ const Form = ({toggle}) => {
       <h4>Your Details</h4>
       <form
         name="contact"
+        method="POST"
         netlify
         data-netlify="true"
         netlify-honeypot="bot-field"
@@ -20,7 +21,7 @@ const Form = ({toggle}) => {
         <input name="Confirm Email" type="email" placeholder="Confirm Email" />
         <input name="Phone" type="tel" placeholder="Phone" />
         <input name="Confirm Phone Number" type="tel" placeholder="Confirm Phone Number" />
-        <input name="House Number" type="number" placeholder="House Number" />
+        <input name="House Number" type="text" placeholder="House Number" />
         <input name="Postcode" type="text" placeholder="Postcode" />
         <div className={styles.selectOuter}>
           <select name="">
