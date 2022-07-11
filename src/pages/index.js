@@ -57,10 +57,6 @@ const IndexPage = () => {
 
   const windowSize = useWindowSize();
 
-  if (!windowSize.width || !windowSize.height) {
-    return null;
-  }
-
 
   return (
     <>
@@ -68,11 +64,11 @@ const IndexPage = () => {
           <title>The Ultimate Tapi Treasure Hunt | Tapi</title>
       </Helmet>
       <Background>
-        <Confetti
+        {(windowSize.width && windowSize.height) && <Confetti
           width={windowSize.width}
           height={windowSize.height}
           colors={[`#F9ECA2`, `#FFFFFF`, `#A39861`, `#797344`]}
-        />
+        />}
       </Background>
       <main>
         { termsHidden === true && <div className={`${styles.terms}`}>
