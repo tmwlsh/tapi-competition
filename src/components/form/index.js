@@ -1,8 +1,9 @@
-import * as React from "react";
+import React, { useState } from "react";
 
 import * as styles from "./styles.module.scss";
 
 const Form = ({toggle}) => {
+  const [selectLabelVisible, setSelectLabelVisible] = useState(true);
   return (
     <div className={styles.formContainer} id="contact">
       <h4>Your Details</h4>
@@ -17,16 +18,16 @@ const Form = ({toggle}) => {
         {/* <input type="hidden" name="bot-field" />
         <input type="hidden" name="contact" value="contact" /> */}
         <input style={{display: 'none'}} name="bot-field" />
-        <input name="Name" type="text" placeholder="Name" />
-        <input name="Email" type="email" placeholder="Email" />
-        <input name="Confirm Email" type="email" placeholder="Confirm Email" />
-        <input name="Phone" type="tel" placeholder="Phone" />
-        <input name="Confirm Phone Number" type="tel" placeholder="Confirm Phone Number" />
-        <input name="House Number" type="number" placeholder="House Number" />
-        <input name="Postcode" type="text" placeholder="Postcode" />
+        <input required name="Name" type="text" placeholder="Name" />
+        <input required name="Email" type="email" placeholder="Email" />
+        <input required name="Confirm Email" type="email" placeholder="Confirm Email" />
+        <input required name="Phone" type="tel" placeholder="Phone" />
+        <input required name="Confirm Phone Number" type="tel" placeholder="Confirm Phone Number" />
+        <input required name="House Number" type="number" placeholder="House Number" />
+        <input required name="Postcode" type="text" placeholder="Postcode" />
         <span className={styles.selectOuter}>
-          <select name="">
-            <option selected disabled>Where did you find your ticket?</option>
+          {selectLabelVisible && <span>Where did you find your ticket?</span>}
+          <select required onChange={() => setSelectLabelVisible(false)} name="Store">
             <option>Tapi Abbotsinch</option>
             <option>Tapi Aberdeen</option>
             <option>Tapi Abingdon</option>
@@ -219,7 +220,7 @@ const Form = ({toggle}) => {
           </select>
         </span>
         <span className={styles.formCheck}>
-          <input type="checkbox" id="terms" name="Terms"/>
+          <input required type="checkbox" id="terms" name="Terms"/>
           <label htmlFor="terms">I agree with our <button onClick={toggle}>Terms and Conditions</button></label>
         </span>
         <span className={styles.submitBtn}>
