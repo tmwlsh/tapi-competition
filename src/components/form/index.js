@@ -15,8 +15,7 @@ const Form = ({toggle}) => {
         netlify-honeypot="bot-field"
         className={`${styles.form}`}
       >
-        {/* <input type="hidden" name="bot-field" />
-        <input type="hidden" name="contact" value="contact" /> */}
+        <input type="hidden" name="contact" value="contact" />
         <input style={{display: 'none'}} name="bot-field" />
         <input required name="Name" type="text" placeholder="Name" />
         <input required name="Email" type="email" placeholder="Email" />
