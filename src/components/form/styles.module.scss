@@ -96,6 +96,16 @@
       border-bottom: 3px solid $white;
       transform: translateY(-50%) rotate(45deg);
     }
+
+    span {
+      display: block;
+      background: $blue;
+      width: 100%;
+      font-size: 24px;
+      padding: 14px 0 14px 10px;
+      position: absolute;
+      pointer-events: none;
+    }
   }
 
   .form-check {
