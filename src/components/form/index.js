@@ -16,6 +16,7 @@ const Form = ({toggle}) => {
       >
         {/* <input type="hidden" name="bot-field" />
         <input type="hidden" name="contact" value="contact" /> */}
+        <input style={{display: 'none'}} name="bot-field" />
         <input name="Name" type="text" placeholder="Name" />
         <input name="Email" type="email" placeholder="Email" />
         <input name="Confirm Email" type="email" placeholder="Confirm Email" />
@@ -23,7 +24,7 @@ const Form = ({toggle}) => {
         <input name="Confirm Phone Number" type="tel" placeholder="Confirm Phone Number" />
         <input name="House Number" type="number" placeholder="House Number" />
         <input name="Postcode" type="text" placeholder="Postcode" />
-        <div className={styles.selectOuter}>
+        <span className={styles.selectOuter}>
           <select name="">
             <option selected disabled>Where did you find your ticket?</option>
             <option>Tapi Abbotsinch</option>
@@ -216,14 +217,14 @@ const Form = ({toggle}) => {
             <option>Tapi Tonbridge</option>
             <option>Tapi Weston super Mare</option>
           </select>
-        </div>
-        <div className={styles.formCheck}>
+        </span>
+        <span className={styles.formCheck}>
           <input type="checkbox" id="terms" name="Terms"/>
           <label htmlFor="terms">I agree with our <button onClick={toggle}>Terms and Conditions</button></label>
-        </div>
-        <div className={styles.submitBtn}>
+        </span>
+        <span className={styles.submitBtn}>
           <input type="submit" value="Submit" />
-        </div>
+        </span>
       </form>
     </div>
   )
